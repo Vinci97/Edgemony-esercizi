@@ -1,0 +1,39 @@
+body{
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(4, 1, 18, 0.875);
+}
+.contain {
+  height:600px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+
+}
+.img-contain{
+  display: flex;
+  gap: 10px
+}
+.contain-btn{
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  gap: 20px
+}
+img{
+  height: 300px;
+  width: 250px;
+  border-radius: 20px;
+}
+
+.btn{
+   height: 20px;
+   width: 20px;
+   border: 0;
+   border-radius: 100%;
+}
