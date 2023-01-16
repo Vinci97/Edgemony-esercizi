@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+.btn{
+    height: 50px;
+    width: 100px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 0;
+    background: rgba(1, 1, 71, 0.317);
+}
+h3,p{
+    padding: 20px;
+    padding-bottom: 20px ;
+}
+.productsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 200px;
+    border: 2px solid black;
+    border-radius: 50px;
+}
+img{
+    height: 150px;
+    width: 200px;
+    border: 2px solid red;
+    border-radius:50px 50px 0 0 ;
+}
