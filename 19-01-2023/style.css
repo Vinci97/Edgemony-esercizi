@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    background: rgba(26, 26, 26, 0.256);
+    
+}
+header{
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    background: rgba(95, 94, 94, 0.589);
+    margin-bottom: 10px;
+    position: relative;
+}
+.title{
+ font-size: 2rem;
+ color: #181d30;
+ font-weight: bold;
+ text-align: center;
+ text-decoration: none;
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+ color:gainsboro;
+ 
+  
+}
+header .tendina {
+
+    background-color: white;
+    box-shadow: 0px 10px 10px #000;
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    right: 10px;
+    top: 65px;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.35s;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  header .tendina .box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;    
+  }
+  header .tendina .delete{
+    cursor: pointer;
+  }
+header img {
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+    border-radius: 100%;
+
+}
+
+header .hamburger{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: space-evenly ;
+    cursor: pointer;
+    flex-direction: column;
+    border-radius: 100%;
+    border:0;
+    overflow: hidden;
+    background-origin: rgba(95, 94, 94, 0.589);
+
+}
+header .hamburger .line{
+    width: 100%;
+    border: 2px solid gainsboro;
+    border-radius: 10px;
+    
+}
+.card h3,p{
+   margin-left: 10px;  
+   margin-right: 10px;  
+  
+}
+.productsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.productsList .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px; 
+    height: 300px;
+    width: 250px;
+    border: 2px solid black;
+    border-radius: 50px;
+}
+.productsList .card button{
+    width: 150px;
+    height: 30px;
+    border: 1px solid grey;
+    border-radius: 50px;
+    background: gray;
+    cursor: pointer;
+    
+}
+.productsList .card img{
+    height: 150px;
+    width: 100%;
+    border-radius: 50px 50px 0 0;
+
+    
+    
+}
+.show {
+    opacity: 1 !important;
+    z-index: 2!important;
+}
+.products{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.categoryForm, .imagesForm{
+    border: 2px solid black;
+    height: 300px;
+    width: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+    border-radius: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.productForm{
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+    width: 550px;
+    justify-content: center;
+    padding-top: 20px;
+    gap: 8px;
+    align-items: center;
+    border-radius: 20px;
+}
+.productForm div{
+    display: flex;
+     align-items: center;
+     gap: 5px;
+     font-size: 14px;
+     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+ input{
+    border-radius: 20px;
+    height: 25px;
+    padding-left: 10px;
+}
+textarea{
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+  
+}
+.invio{
+    width: 60px;
+    height: 30px;
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+}

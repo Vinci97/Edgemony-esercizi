@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./posts.js" type="module"></script>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="./img/logo.png" alt="logo">
+        </div>
+        <a class="title" href="index.html">My E-commerce</a>
+        <div class="hamburger">
+           <div class="line"></div>
+           <div class="line"></div>
+           <div class="line"></div>
+        </div>
+        <div class="tendina"></div>
+    </header>
+    
+    <div class="products">
+        <h1>Form Per inserire i prodotti</h1>
+        <form id="postForm" class="productForm">
+            <div>
+                <label for="title">title:</label>
+                <input name="title" type="text" id="title" required/>
+            </div>
+
+            <div>
+                <label for="price">Price:</label>
+                <input name="price" type="number" id="price" required/>
+            </div>
+
+            <div>
+                <label for="category">category:</label>
+                <input name="category" type="number" min="1" id="category" required />
+            </div>
+            
+            <div>
+                <label for="image">image:</label>
+                <input name="image" type="text" placeholder="put an correct URL image" id="image" required/>
+            </div>
+
+            <div>
+                <label for="description">description:</label>
+                <textarea name="description" id="description" required></textarea>
+            </div>
+            <input class="invio" type="submit" value="INVIA">
+        </form>
+        <h1>Form per inserire le categorie</h1>
+        <form class="categoryForm">
+            
+            <div>
+                <label for="name">Category Name:</label>
+                <input name="name" type="text" id="categoryName" required/>
+            </div>
+
+            <div>
+                <label for="image">Category Image:</label>
+                <input name="image" type="url" id="categoryImage" required/>
+            </div>
+            <input class="invio" type="submit" value="INVIA">
+        </form>
+        <h1>Form per inserire le immagini</h1>
+        <form class="imagesForm">
+            <div>
+                <label for="image">images Image:</label>
+                <input name="image1" type="url" id="imagesImg1" required/>
+            </div>
+            <div>
+                <label for="image">images Image:</label>
+                <input name="image2" type="url" id="imagesImg2" required/>
+            </div>
+            <div>
+                <label for="image">images Image:</label>
+                <input name="image3" type="url" id="imagesImg3" required/>
+            </div>
+            <input class="invio" type="submit" value="INVIA">
+        </form>
+
+    </div>
+    
+</body>
+</html>
