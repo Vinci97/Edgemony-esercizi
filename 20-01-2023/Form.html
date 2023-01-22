@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style2.css" />
+    <script src="./posts.js" type="module"></script>
+</head>
+<body>
+    <header class="header-form">
+        <a class="title" href="index.html">My E-commerce</a>
+    </header>
+    
+    <div class="products">
+
+        <h1>Form Per inserire i prodotti</h1>
+        <form id="postForm" class="productForm">
+
+            <div>
+                <label for="title">Aggiungi/Modifica</label>
+                <select required>
+                    <option value="POST">Aggiungi</option>
+                    <option value="PUT">Modifica</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="title">ID Product:</label>
+                <input name="title"placeholder=" solo per modifica prodotto"/>
+            </div>
+ 
+            <div>
+                <label for="title">title:</label>
+                <input name="title" type="text" id="title" required/>
+            </div>
+
+
+            <div>
+                <label for="price">Price:</label>
+                <input name="price" type="number" id="price" required/>
+            </div>
+
+            <div>
+                <label for="category">category:</label>
+                <input name="category" type="number" min="1" id="category" required />
+            </div>
+            
+            <div>
+                <label for="image">image:</label>
+                <input name="image" type="text" placeholder="put an correct URL image" id="image" />
+            </div>
+
+            <div>
+                <label for="description">description:</label>
+                <textarea name="description" id="description" required></textarea>
+            </div>
+            <input class="invio" type="submit" value="INVIA">
+        </form>
+
+
+        <h1>Form per inserire le categorie</h1>
+        <form class="categoryForm">
+            
+            <div>
+                <label for="name">Category Name:</label>
+                <input name="name" type="text" id="categoryName" required/>
+            </div>
+
+            <div>
+                <label for="image">Category Image:</label>
+                <input name="image" type="url" id="categoryImage" required/>
+            </div>
+            <input class="invio" type="submit" value="INVIA">
+        </form>
+        
+        <form class="put">
+
+        </form>
+
+
+        <h1>Form Per ELIMINARE un prodotto</h1>
+        <form class="deleteProductForm">
+            <div>
+                <label for="name">Product ID:</label>
+                <input name="name" type="text" id="productId" required/>
+            </div>
+            <input class="invio" type="submit" value="INVIA">
+        </form>
+
+
+    </div>
+    
+</body>
+</html>
