@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgb(50, 50, 50);
+    flex-direction: column;
+    gap: 50px;
+
+    
+}
+
+.opacity{
+    height: 350px;
+    width: 300px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:20px;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.705);
+    color: rgb(255, 255, 255);
+    
+}
+
+.card{
+    background: url("https://staticfanpage.akamaized.net/wp-content/uploads/sites/27/2021/02/michael-jordan-1200x675.jpg") center center no-repeat;
+    border-radius: 50px;
+    
+} 
+.card:hover{
+    transition: all 0.35s;
+    box-shadow: 10px 10px 10px rgba(255, 47, 47, 0.895);
+    background: url("https://media.posterlounge.com/images/l/1890040.jpg") center center no-repeat;
+} 
+.line{
+    width: 80%;
+    border: 1px solid rgb(255, 255, 255);
+}
+.generator{
+    height: 40px;
+    width: 100px;
+    border-radius: 50px;
+    background: black;
+    border: 0;
+    color: white;
+}
+.generator:hover{
+    transition: all 0.35s;
+    box-shadow: 4px 4px 4px rgba(255, 47, 47, 0.895);
+}
