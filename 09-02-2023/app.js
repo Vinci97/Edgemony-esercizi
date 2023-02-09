@@ -46,7 +46,7 @@ app.post('/login',(req, res)=>{
     if(name){
         return res
         .status(200)
-        .render(`Benvenuto/a: ${name}`)
+        .render("login",{name: `Benvenuto/a: ${name}`})
     }
     return res.status(400)
     .json({success:false, msg:`non c'è nessuno che si chima: ${name}`})   
