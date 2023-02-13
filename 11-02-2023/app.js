@@ -9,6 +9,7 @@ app.set('view engine', 'hbs')
 hbs.registerPartials(__dirname + '/views/partials');
 app.use(express.static('./public'))
 
+app.use(bodyParser.urlencoded({extended:true}))
 app.use(session({secret: "la mia sessione "}))
 
 
@@ -38,7 +39,7 @@ app.post('/login', (req, res) =>{
     console.log(`${req.body.name} / ${req.body.password}`)
     if(!req.body.name || !req.body.password){
         res.status(400)
-        res.render('/login', {message: 'per favore, aggiungi tutti i dati richiesti'})
+        res.render('login', {message: 'per favore, aggiungi tutti i dati richiesti'})
     }else{
         let name = 'vincenzo'
         let password = '246'
