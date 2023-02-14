@@ -1,0 +1,130 @@
+// db.createCollection('giochi')
+// { ok: 1 }
+// db.giochi.insertMany([
+//   {
+//     titolo: "Forza Horizon 4",
+//     descrizione:"Le stagioni dinamiche cambiano tutto nel festival automobilistico più grande del mondo. Gareggia in solitaria o fai squadra per esplorare la bellissima e storica Gran Bretagna in un mondo aperto e condiviso. Colleziona, modifica e guida oltre 450 auto. Gareggia, esegui acrobazie, crea ed esplora: scegli la tua strada per diventare una Superstar di Horizon",
+//     categoria: "Giochi di gare",
+//     keywordas: ["Corsa","Volo"]
+//   },
+//   {
+//     titolo: "Monster Hunter Rise",
+//     descrizione:"Accetta la sfida e unisciti alla caccia! In Monster Hunter Rise, l'ultimo capitolo della serie più venduta e pluripremiata Monster Hunter, entrerai a far parte dei cacciatori, esplorerai mappe nuove di zecca e utilizzerai tantissime armi per abbattere temibili mostri all'interno di una trama nuovissima.",
+//     categoria: "Giochi di ruolo",
+//     keywordas: ["Azione","Avventura"]
+//   },
+//   {
+//     titolo: "Hogwarts Legacy",
+//     descrizione:"Hogwarts Legacy per PC è un gioco di ruolo d'azione e avventura per giocatore singolo basato sull'universo di Harry Potter, in cui il giocatore assume il ruolo di un nuovo arrivato nel castello incantato tanto amato dai fan dei libri e del franchise cinematografico",
+//     categoria: "Gioco di ruolo",
+//     keywordas: ["Azione","Avventura"]
+//   }
+//   ])
+// {
+//   acknowledged: true,
+//   insertedIds: {
+//     '0': ObjectId("63ebaa1f7bfa9c26fedc6df7"),
+//     '1': ObjectId("63ebaa1f7bfa9c26fedc6df8"),
+//     '2': ObjectId("63ebaa1f7bfa9c26fedc6df9")
+//   }
+// }
+// db.giochi.find()
+// {
+//   _id: ObjectId("63ebaa1f7bfa9c26fedc6df7"),
+//   titolo: 'Forza Horizon 4',
+//   descrizione: 'Le stagioni dinamiche cambiano tutto nel festival automobilistico più grande del mondo. Gareggia in solitaria o fai squadra per esplorare la bellissima e storica Gran Bretagna in un mondo aperto e condiviso. Colleziona, modifica e guida oltre 450 auto. Gareggia, esegui acrobazie, crea ed esplora: scegli la tua strada per diventare una Superstar di Horizon',
+//   categoria: 'Giochi di gare',
+//   keywordas: [
+//     'Corsa',
+//     'Volo'
+//   ]
+// }
+// {
+//   _id: ObjectId("63ebaa1f7bfa9c26fedc6df8"),
+//   titolo: 'Monster Hunter Rise',
+//   descrizione: "Accetta la sfida e unisciti alla caccia! In Monster Hunter Rise, l'ultimo capitolo della serie più venduta e pluripremiata Monster Hunter, entrerai a far parte dei cacciatori, esplorerai mappe nuove di zecca e utilizzerai tantissime armi per abbattere temibili mostri all'interno di una trama nuovissima.",
+//   categoria: 'Giochi di ruolo',
+//   keywordas: [
+//     'Azione',
+//     'Avventura'
+//   ]
+// }
+// {
+//   _id: ObjectId("63ebaa1f7bfa9c26fedc6df9"),
+//   titolo: 'Hogwarts Legacy',
+//   descrizione: "Hogwarts Legacy per PC è un gioco di ruolo d'azione e avventura per giocatore singolo basato sull'universo di Harry Potter, in cui il giocatore assume il ruolo di un nuovo arrivato nel castello incantato tanto amato dai fan dei libri e del franchise cinematografico",
+//   categoria: 'Gioco di ruolo',
+//   keywordas: [
+//     'Azione',
+//     'Avventura'
+//   ]
+// }
+// db.giochi.findOne(titolo: "Monster Hunter Rise")
+// Error: clone(t={}){const r=t.loc||{};return e({loc:new Position("line"in r?r.line:this.loc.line,"column"in r?r.column:...<omitted>...)} could not be cloned.
+// db.giochi.findOne({titolo: "Monster Hunter Rise"})
+// {
+//   _id: ObjectId("63ebaa1f7bfa9c26fedc6df8"),
+//   titolo: 'Monster Hunter Rise',
+//   descrizione: "Accetta la sfida e unisciti alla caccia! In Monster Hunter Rise, l'ultimo capitolo della serie più venduta e pluripremiata Monster Hunter, entrerai a far parte dei cacciatori, esplorerai mappe nuove di zecca e utilizzerai tantissime armi per abbattere temibili mostri all'interno di una trama nuovissima.",
+//   categoria: 'Giochi di ruolo',
+//   keywordas: [
+//     'Azione',
+//     'Avventura'
+//   ]
+// }
+// db.giochi.insertOne(
+//   {    titolo: "Monster Hunter Rise",
+//     descrizione:"Accetta la sfida e unisciti alla caccia! In Monster Hunter Rise, l'ultimo capitolo della serie più venduta e pluripremiata Monster Hunter, entrerai a far parte dei cacciatori, esplorerai mappe nuove di zecca e utilizzerai tantissime armi per abbattere temibili mostri all'interno di una trama nuovissima.",
+//     categoria: "Giochi di ruolo",
+//     keywordas: ["Azione","Avventura"]}
+//   )
+// {
+//   acknowledged: true,
+//   insertedId: ObjectId("63ebb2ac7bfa9c26fedc6dfa")
+// }
+// db.giochi.updateOne({titolo: "Hogwarts Legacy"},
+// {
+//   $set: {
+//     titolo: "Hogwarts Legacy - Europe"
+//   }
+// })
+// {
+//   acknowledged: true,
+//   insertedId: null,
+//   matchedCount: 1,
+//   modifiedCount: 1,
+//   upsertedCount: 0
+// }
+// db.giochi.countDocuments()
+// 4
+// db.giochi.find().limit(2)
+// {
+//   _id: ObjectId("63ebaa1f7bfa9c26fedc6df7"),
+//   titolo: 'Forza Horizon 4',
+//   descrizione: 'Le stagioni dinamiche cambiano tutto nel festival automobilistico più grande del mondo. Gareggia in solitaria o fai squadra per esplorare la bellissima e storica Gran Bretagna in un mondo aperto e condiviso. Colleziona, modifica e guida oltre 450 auto. Gareggia, esegui acrobazie, crea ed esplora: scegli la tua strada per diventare una Superstar di Horizon',
+//   categoria: 'Giochi di gare',
+//   keywordas: [
+//     'Corsa',
+//     'Volo'
+//   ]
+// }
+// {
+//   _id: ObjectId("63ebaa1f7bfa9c26fedc6df8"),
+//   titolo: 'Monster Hunter Rise',
+//   descrizione: "Accetta la sfida e unisciti alla caccia! In Monster Hunter Rise, l'ultimo capitolo della serie più venduta e pluripremiata Monster Hunter, entrerai a far parte dei cacciatori, esplorerai mappe nuove di zecca e utilizzerai tantissime armi per abbattere temibili mostri all'interno di una trama nuovissima.",
+//   categoria: 'Giochi di ruolo',
+//   keywordas: [
+//     'Azione',
+//     'Avventura'
+//   ]
+// }
+// db.giochi.find({titolo: "Forza Horizon 4"},{descrizione: "Le stagioni dinamiche cambiano tutto nel festival automobilistico più …"})
+// {
+//   _id: ObjectId("63ebaa1f7bfa9c26fedc6df7"),
+//   descrizione: 'Le stagioni dinamiche cambiano tutto nel festival automobilistico più …'
+// }
+// db.giochi.deleteOne({_id: ObjectId('63ebb2ac7bfa9c26fedc6dfa')})
+// {
+//   acknowledged: true,
+//   deletedCount: 1
+// }
