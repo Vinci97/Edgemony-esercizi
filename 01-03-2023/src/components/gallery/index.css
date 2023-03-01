@@ -1,0 +1,29 @@
+.boxGallery{
+    display: flex;
+    height: 300px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    gap: 10px;
+}
+.img1,.img2,.img3{
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+.img1{
+    width: 25%;
+    
+}
+.img2{
+    width: 50%;
+}
+.img3{
+    width: 25%;
+}
+.titleGallery {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }

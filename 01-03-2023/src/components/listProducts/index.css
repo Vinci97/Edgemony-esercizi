@@ -1,0 +1,15 @@
+.ListProducts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px 10px;
+  }
+.titleProduct {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
