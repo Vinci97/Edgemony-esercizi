@@ -191,7 +191,6 @@ select option {
  background-color: #fff;
  color: #333;
  border-bottom: 1px solid #ccc;
-  transition: background-color 0.2s ease-in-out;
 }
 select:focus::-ms-value {
   background-color: transparent;

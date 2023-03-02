@@ -25,9 +25,9 @@ const meteoCardGen = (data) => {
     const coord = cE('p');
     coord.textContent = `lat ${data.coord.lat} / lon ${data.coord.lon}°`
     const sunrise = cE('p');
-    sunrise.textContent = `alba ${data.sys.sunrise} `
+    sunrise.textContent = `alba ${new Date(data.sys.sunrise).getUTCHours()}:${new Date(data.sys.sunrise).getUTCMinutes()} `;
     const sunset = cE('p');
-    sunset.textContent = `tramonto ${data.sys.sunset}`
+    sunset.textContent = `tramonto ${new Date(data.sys.sunset).getUTCHours()}:${new Date(data.sys.sunset).getUTCMinutes()}`;
     
 
     const contCity = cE('div');

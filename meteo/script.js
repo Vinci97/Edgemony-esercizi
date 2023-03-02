@@ -19,15 +19,16 @@ Promise.all(
         }
       });
 
-    input.addEventListener('input',(event)=>{
+    Button.addEventListener('click',(event)=>{
         onPostsDelete()
         searchedValue = event.target.value;
-        fetchCitta.filter((item) => 
-        {
-            if(item.name.toLowerCase().includes(searchedValue.toLowerCase())){
-                    section.appendChild(meteoCardGen(item));
-            }
-        })
+       const newArrey= fetchCitta.filter((item) =>item.name.toLowerCase()===searchedValue.toLowerCase() )
+       newArrey.map(item=>section.appendChild(meteoCardGen(item)))
+        // {
+        //     if(item.name.toLowerCase()===searchedValue.toLowerCase()){
+        //             section.appendChild(meteoCardGen(item));
+        //     }
+        // })
     })
     // Button.addEventListener('click',()=>{
     //     const filterText = input.value.toLowerCase();
