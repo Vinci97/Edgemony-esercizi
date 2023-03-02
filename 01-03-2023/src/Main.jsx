@@ -15,7 +15,6 @@ const Main = () => {
         onClick={() => setDarkMode((prev) => !prev)}>
         {isDarkMode ? "☀️" : "🌙"}
       </button>
-      {/* <ImgProduct/> */}
       <Header />
       <Hero title="Store" />
       <Gallery/>
