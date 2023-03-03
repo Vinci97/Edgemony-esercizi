@@ -5,7 +5,6 @@ import Hero from "./components/hero";
 import Gallery from "./components/gallery"
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
-import ImgProduct from "./components/imgProduct";
 const Main = () => {
   const [isDarkMode, setDarkMode] = useState(true);
   return (

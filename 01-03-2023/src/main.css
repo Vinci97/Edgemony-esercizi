@@ -1,7 +1,7 @@
 .dark-mode {
     background-color: rgb(32, 32, 32);
     color: rgb(225, 225, 225);
-  }
+}
   
 .toggle-mode {
     position: fixed;
@@ -13,4 +13,5 @@
     border: 1px solid white;
     border-radius: 100%;
     cursor: pointer;
+    z-index: 1;
 }
