@@ -1,0 +1,14 @@
+.Month{
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 1px solid;
+}
+.cont-dey{
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid;
+
+}
