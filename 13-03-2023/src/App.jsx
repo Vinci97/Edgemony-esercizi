@@ -8,7 +8,7 @@ function App() {
     'Burro',
     'Formaggio'
   ]);
-  const [newItem, setNewItem] = useState('');
+  const [newItem, setNewItem] = useState();
   const submit=(event)=> {
     event.preventDefault();
     setShoppingList([...shoppingList, newItem]); 
@@ -19,7 +19,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className='App'>
       <h1>Lista della spesa</h1>
       <ul>
         {shoppingList.map(item => (
