@@ -15,7 +15,7 @@ const Calendar = () =>{
     return(
         <div className="Calendar">
             <button onClick={onHandlePreviousClick}>{'<'}</button>
-            <Month monthNum={getDeyActualMonth(monthCounter)} monthLiteral={getMonthLiteral(monthNum + monthCounter)}/>
+            <Month monthNum={getDeyActualMonth(monthCounter)} monthLiteral={getMonthLiteral(new Date().getMonth() + monthCounter)}/>
             <button onClick={onHandleNextClick}>{'>'}</button>
         </div>
     )

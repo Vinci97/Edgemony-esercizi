@@ -7,8 +7,10 @@ export const getDeyActualMonth = (plusMonth = 0) =>{
     let DeyInActualMonth = new Date(Year,Month,0).getDate();
     return DeyInActualMonth;
 }
-export const getMonthLiteral = ()=> new Date().toLocaleDateString('it-IT',{month: "long"}).toUpperCase();
-
+export const getMonthLiteral = (month = new Date().getMonth()) =>
+  new Date(new Date().setMonth(month)).toLocaleString("it-IT", {
+    month: "long",
+  });
 
 const Month = ({monthNum,monthLiteral}) =>{
     const [Active, setActive] = useState(new Date().getDate() )
