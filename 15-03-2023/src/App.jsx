@@ -4,16 +4,48 @@ import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar";
 import "./App.css";
 import ListMini from "./components/listMini";
+import ProductDetail from "./components/productDetail/ProductDetail";
+import { useState } from "react";
+import Cart from "./components/cart/Cart";
 
 function App() {
+  const [searchInputValue, setSearchInputValue] = useState("");
+  const [modalContext, setModalContext] = useState({
+    productData: {},
+    isVisibile: false,
+  });
+  const [cartList, setCardList] = useState([]);
+  const localStorageCartList =
+    window !== "undefined" &&
+    JSON.parse(localStorage.getItem("cartList") || "[]").length;
+
   return (
     <div className="App">
-      <Navbar />
+      <Navbar
+        cartListLength={localStorageCartList || cartList.length}
+        setSearchInputValue={setSearchInputValue}
+      />
       <Hero />
-      <ListMini/>
-      <CardList title="Technology" endpoint="/products?limit=10" />
-      <CardList title="Skincare" endpoint="/products?limit=10&skip=10" />
+      <ListMini />
+      <CardList
+        title="Technology"
+        endpoint="/products?limit=10"
+        setModalContext={setModalContext}
+      />
+      <CardList
+        title="Skincare"
+        endpoint="/products?limit=10&skip=10"
+        setModalContext={setModalContext}
+      />
       <Footer />
+      {modalContext.isVisibile && (
+        <ProductDetail
+          productData={modalContext.productData}
+          setCardList={setCardList}
+          setModalContext={setModalContext}
+        />
+        )}
+       <Cart productData={JSON.parse(localStorage.getItem("cartList"))}/>
     </div>
   );
 }

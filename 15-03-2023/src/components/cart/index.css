@@ -1,0 +1,20 @@
+.Cart{
+    position: fixed;
+    right: 0;
+    margin-top: 120px;
+    border: 1px solid;
+    width: 300px;
+    gap: 10px;
+    background: white;
+}
+.CartItem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    width: 300px;
+}
+.img_cart{
+  width: 40px;
+  height: 40px;
+}

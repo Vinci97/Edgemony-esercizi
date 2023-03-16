@@ -6,7 +6,7 @@ import "./index.css"
 const ListMini = ()=>{
     const [miniCards, setMiniCards] = useState([]);
     useEffect(() => {
-      GET("/products").then((data) => setMiniCards(() => data.products));
+      GET(`/products`).then((data) => setMiniCards(() => data.products));
     }, []);
     return(
       <div className="App__miniCards">
