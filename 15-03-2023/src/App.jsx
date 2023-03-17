@@ -16,7 +16,7 @@ function App() {
   });
   const [modalCart, setModalCart] = useState(false)
 
-  const [cartList, setCardList] = useState([]);
+  const [cartList, setCardList] = useState(JSON.parse(localStorage.getItem("cartList")) || []);
   const localStorageCartList =
     window !== "undefined" &&
     JSON.parse(localStorage.getItem("cartList") || "[]").length;
@@ -50,8 +50,7 @@ function App() {
           setModalContext={setModalContext}
         />
         )}
-      {modalCart && <Cart productData={JSON.parse(localStorage.getItem("cartList"))}  
-      setModalCart = {setModalCart} cartListLength={localStorageCartList || cartList.length} cartList={cartList}/>}
+      {modalCart && <Cart productData={JSON.parse(localStorage.getItem("cartList"))}cartList={cartList} setCardList={setCardList}/>}
     </div>
   );
 }
