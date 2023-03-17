@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import CartItem from "../cartItem"
 import "./index.css"
 const Cart = ({productData,cartList,setCardList}) =>{
-    const [items, setItems] = useState(productData || []);
     function DeleteItem(id) {
         const filteredItems = cartList.filter((item) => item.id !== id);
         setCardList(filteredItems);
