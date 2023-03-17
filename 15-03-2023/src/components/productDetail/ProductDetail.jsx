@@ -21,13 +21,17 @@ const ProductDetail = ({ productData, setModalContext, setCardList }) => {
     const localStorageCartItems =
       JSON.parse(localStorage.getItem("cartList")) || [];
 
-    setCardList((prev) => [...prev, productData]);
-    localStorage.setItem(
-      "cartList",
-      JSON.stringify([...localStorageCartItems, productData])
-    );
+    setCardList((prev) =>prev.find(prod=>prod.id === productData.id)?[...prev]: [...prev, productData]);
+    if(!!localStorageCartItems.find(prod=>prod.id === productData.id)) {   
+      localStorage.setItem(
+        "cartList",
+        JSON.stringify([...localStorageCartItems, productData])
+      );
+      alert(`Hai aggiunto ${productData.title} al carrello`);
+    } else {
+      alert(`${productData.title} è già nel carrello`);
+    };
   };
-
   const onHandleImageClick = (imgUrl) => {
     setGalleryVisible(true);
     setSelectedPhoto(() => imgUrl);
