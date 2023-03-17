@@ -6,13 +6,8 @@ const Cart = ({productData,cartList,setCardList}) =>{
     function DeleteItem(id) {
         const filteredItems = cartList.filter((item) => item.id !== id);
         setCardList(filteredItems);
-        localStorage.setCardList("cartList", JSON.stringify(filteredItems));
+        localStorage.setItem("cartList", JSON.stringify(filteredItems));
     }
-    useEffect(()=>{
-        const items = JSON.parse(localStorage.getItem('cartItems'));
-      if (items) {
-        setCardList(items);}
-    })
     return(
         <div className="Cart">
            {cartList.map(item => <CartItem items={item} key={item.id} DeleteItem={DeleteItem}/>)}
