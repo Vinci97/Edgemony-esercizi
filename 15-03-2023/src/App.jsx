@@ -14,16 +14,21 @@ function App() {
     productData: {},
     isVisibile: false,
   });
+  const [modalCart, setModalCart] = useState(false)
+
   const [cartList, setCardList] = useState([]);
   const localStorageCartList =
     window !== "undefined" &&
     JSON.parse(localStorage.getItem("cartList") || "[]").length;
+  
 
   return (
     <div className="App">
       <Navbar
         cartListLength={localStorageCartList || cartList.length}
         setSearchInputValue={setSearchInputValue}
+        setModalCart = {setModalCart}
+        modalCart = {modalCart}
       />
       <Hero />
       <ListMini />
@@ -45,7 +50,8 @@ function App() {
           setModalContext={setModalContext}
         />
         )}
-       <Cart productData={JSON.parse(localStorage.getItem("cartList"))}/>
+      {modalCart && <Cart productData={JSON.parse(localStorage.getItem("cartList"))}  
+      setModalCart = {setModalCart} cartListLength={localStorageCartList || cartList.length} cartList={cartList}/>}
     </div>
   );
 }

@@ -1,20 +1,22 @@
+import { useEffect, useState } from "react";
+import CartItem from "../cartItem"
 import "./index.css"
-const CartItem = ({productData}) =>{
-    return(
-        <div className="CartItem">
-           <img className="img_cart" src={productData.thumbnail} alt={productData.title} />
-           <h3 className="title_cart">{productData.title}</h3>
-           <p className="price_cart">$ {productData.price}</p>
-           <button className="delete_cart" onClick="">Elimina</button>
-        </div>
-    )
-}
-const Cart = ({productData}) =>{
+const Cart = ({productData}, cartList) =>{
+    const [items, setItems] = useState(productData);
+    function DeleteItem(id) {
+        const filteredItems = items.filter((item) => item.id !== id);
+        setItems(filteredItems);
+        localStorage.setItem("cartList", JSON.stringify(filteredItems));
+    }
+    useEffect(()=>{
+        const items = JSON.parse(localStorage.getItem('cartItems'));
+      if (items) {
+        setItems(items);}
+    })
     return(
         <div className="Cart">
-          {productData.map(item => <CartItem productData={item} key={item.id} /> )}
+           {items.map(item => <CartItem items={item} key={item.id} DeleteItem={DeleteItem}/>)}
         </div>
     )
-
 }
 export default Cart
