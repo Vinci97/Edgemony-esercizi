@@ -1,0 +1,41 @@
+@mixin display($display:flex){
+    display: $display;
+    align-items: center;
+    justify-content: center;
+}
+.Navbar{
+    height: 100px;
+    @include display;
+    padding: 10px;
+    justify-content: space-between;
+    border: 1px solid;
+    .Navbar_list{
+       @include display;
+       list-style-type: none;
+       gap: 20px;
+       li {
+        font-weight: bold;
+        cursor: pointer;
+       }
+
+    }
+    .Navbar_logo{
+        width: 50px; 
+    }
+    div{
+        @include display;
+        .Navbar_button{
+            width: 100px;
+        }
+        .Navbar_social{
+            @include display;
+            justify-content: space-between;
+            margin: 10px;
+            width: 100px;
+            img{
+                width: 25px;
+                height: 25px; 
+            }
+        }
+    }
+}

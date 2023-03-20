@@ -1,0 +1,26 @@
+.Card{
+  height: 400px;
+  width: 260px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  .Card_imgDrink {
+    width: 260px;
+    height: 280px;
+    object-fit: cover;
+  }
+  .Card_test{
+    position: absolute;
+    border: 1px solid;
+    bottom: 50px;
+    width: 80%;
+    padding: 10px;
+    background-color: white;
+    
+    ul{
+        padding-left: 15px;
+        margin-top: 5px;
+    }
+  }
+  
+}

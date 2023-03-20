@@ -1,0 +1,38 @@
+@mixin display($display:flex){
+    display: $display;
+    align-items: center;
+    justify-content: center;
+}
+.Hero{
+    @include display;
+    flex-direction: column;
+    margin-bottom: 50px;
+    h1{
+        margin: 50px;
+        font-size: 3rem;
+    }
+    .hero_first_list{
+        @include display;
+        list-style-type: none;
+        gap: 20px;
+        font-weight: bold;
+    }
+    hr{
+        width: 80%;
+        border: 0;
+        border-bottom: 1px dotted black;
+        border-width: 4px;
+        margin: 20px;
+    }
+    .hero_second_list{
+        @include display;
+        width: 80%;
+        list-style-type: none;
+        justify-content: space-around;
+        font-weight: bold;
+        li{
+            border-bottom: 1px solid black;
+        }
+    }
+    
+}
