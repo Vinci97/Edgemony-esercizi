@@ -6,7 +6,7 @@
 .Hero{
     @include display;
     flex-direction: column;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     h1{
         margin: 50px;
         font-size: 3rem;
@@ -16,6 +16,7 @@
         list-style-type: none;
         gap: 20px;
         font-weight: bold;
+        cursor: pointer;
     }
     hr{
         width: 80%;
@@ -30,8 +31,13 @@
         list-style-type: none;
         justify-content: space-around;
         font-weight: bold;
+        cursor: pointer;
         li{
             border-bottom: 1px solid black;
+            &:hover {
+                background-color: black;
+                color: white;
+              }
         }
     }
     

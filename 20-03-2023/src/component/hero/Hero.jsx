@@ -1,5 +1,9 @@
-import "./index.scss"
-const Hero =()=>{
+import "./index.scss" 
+const Hero =({setCategory})=>{
+   
+    const onHandleClick=(value)=>{
+        setCategory(value)
+    }
     return(
         <div className="Hero">
             <h1>Cocktail by Vincenzo</h1>
@@ -11,12 +15,12 @@ const Hero =()=>{
             </ul>
             <hr />
             <ul className="hero_second_list">
-                <li>Ordinary Drink</li>
-                <li>Cocktail</li>
-                <li>Shot</li>
-                <li>Pounch</li>
-                <li>Coffee</li>
-                <li>other</li>
+                <li onClick={()=>onHandleClick('Ordinary Drink')}>Ordinary Drink</li>
+                <li onClick={()=>onHandleClick('Cocktail')}>Cocktail</li>
+                <li onClick={()=>onHandleClick('Shot')}>Shot</li>
+                <li onClick={()=>onHandleClick('Pounch / Party Drinck')}>Pounch</li>
+                <li onClick={()=>onHandleClick('Coffee / Tea')}>Coffee</li>
+                <li onClick={()=>onHandleClick('Other / Unoknow')}>other</li>
             </ul>
         </div>
     )

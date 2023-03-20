@@ -4,9 +4,11 @@ import { GET } from "./utils/http";
 import Content from './component/content/Content';
 import Hero from './component/hero/Hero';
 import Navbar from './component/navbar/Navbar';
+import {filteredList} from "./utils/funcs"
 
 function App() {
   const [cocktailList, setCocktailList]= useState([]);
+  const [category, setCategory]= useState("Cocktail");
   useEffect(()=>{
     GET("/search.php?f=a").then(({drinks})=>{
       setCocktailList(()=> drinks)
@@ -15,8 +17,8 @@ function App() {
   return (
     <div className="App">
        <Navbar/>
-       <Hero/>
-       <Content data={cocktailList}/>
+       <Hero setCategory={setCategory}/>
+       <Content data={filteredList(cocktailList, 'strCategory',category)}/>
     </div>
   )
 }

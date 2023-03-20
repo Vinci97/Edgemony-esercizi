@@ -6,16 +6,22 @@
   justify-content: center;
   .Card_imgDrink {
     width: 260px;
-    height: 280px;
+    height: 260px;
     object-fit: cover;
   }
   .Card_test{
     position: absolute;
     border: 1px solid;
-    bottom: 50px;
+    bottom: -25px;
     width: 80%;
+    height: 180px;
     padding: 10px;
     background-color: white;
+    h3{
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+    }
     
     ul{
         padding-left: 15px;
