@@ -1,21 +1,14 @@
-@mixin display($display:flex){
-    display: $display;
-    align-items: center;
-    justify-content: center;
-}
+@import "../../styles/variables";
 .Navbar{
     height: 100px;
-    @include display;
+    @include display(center,space-between);
     padding: 10px;
-    justify-content: space-between;
-    border: 1px solid;
+    border-bottom: 1px solid $primary-color;
     .Navbar_list{
-       @include display;
+       @include display(center,center,20px);
        list-style-type: none;
-       gap: 20px;
        li {
-        font-weight: bold;
-        cursor: pointer;
+        @include cursor;
        }
 
     }
@@ -23,13 +16,22 @@
         width: 50px; 
     }
     div{
-        @include display;
+        @include display(center,center);
         .Navbar_button{
             width: 100px;
+            height: 40px;
+            border: 0;
+            border-radius: 12px;
+            background-color: $active-color;
+            color: $primary-color;
+            @include cursor;
+            &:hover{
+                background: $impression-color;
+                color: $primary-color;
+            }
         }
         .Navbar_social{
-            @include display;
-            justify-content: space-between;
+            @include display(center,space-between);
             margin: 10px;
             width: 100px;
             img{

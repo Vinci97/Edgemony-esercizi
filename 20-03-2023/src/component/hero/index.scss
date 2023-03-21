@@ -1,42 +1,34 @@
-@mixin display($display:flex){
-    display: $display;
-    align-items: center;
-    justify-content: center;
-}
+@import "../../styles/variables";
 .Hero{
-    @include display;
-    flex-direction: column;
+    @include display(center,center,0,nowrap,column);
     margin-bottom: 20px;
     h1{
         margin: 50px;
         font-size: 3rem;
+        color: $primary-color;
     }
     .hero_first_list{
-        @include display;
+        @include display(center,center,20px);
         list-style-type: none;
-        gap: 20px;
-        font-weight: bold;
-        cursor: pointer;
+        @include cursor;
     }
     hr{
         width: 80%;
         border: 0;
-        border-bottom: 1px dotted black;
+        border-bottom: 1px dotted $primary-color;
         border-width: 4px;
         margin: 20px;
     }
     .hero_second_list{
-        @include display;
+        @include display(center,space-around);
         width: 80%;
         list-style-type: none;
-        justify-content: space-around;
-        font-weight: bold;
-        cursor: pointer;
+        @include cursor;
         li{
-            border-bottom: 1px solid black;
+            border-bottom: 1px solid $primary-color;
             &:hover {
-                background-color: black;
-                color: white;
+                background-color: $primary-color;
+                color: $active-color;
               }
         }
     }

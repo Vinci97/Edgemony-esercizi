@@ -1,9 +1,9 @@
+@import "../../styles/variables";
 .Card{
-  height: 400px;
+  height: 425px;
   width: 260px;
   position: relative;
-  display: flex;
-  justify-content: center;
+  @include display(start,center);
   .Card_imgDrink {
     width: 260px;
     height: 260px;
@@ -11,12 +11,14 @@
   }
   .Card_test{
     position: absolute;
-    border: 1px solid;
-    bottom: -25px;
+    border: 1px solid $primary-color;
+    bottom: 0px;
     width: 80%;
     height: 180px;
     padding: 10px;
-    background-color: white;
+    background: $impression-color;
+    box-shadow: 0 0 5px $primary-color-alpha;
+    color: $primary-color;
     h3{
       margin-top: 10px;
       margin-bottom: 10px;
