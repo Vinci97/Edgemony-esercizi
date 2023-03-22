@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
-import './App.scss';
 import { GET } from "./utils/http";
 import Content from './component/content/Content';
 import Hero from './component/hero/Hero';
 import Navbar from './component/navbar/Navbar';
 import {filteredList} from "./utils/funcs"
+import styles from "./App.module.scss"
+import Footer from './component/footer';
 
 function App() {
   const [cocktailList, setCocktailList]= useState([]);
@@ -15,10 +16,11 @@ function App() {
     })
   },[])
   return (
-    <div className="App">
+    <div className={styles.App}>
        <Navbar/>
        <Hero setCategory={setCategory}/>
        <Content data={filteredList(cocktailList, 'strCategory',category)}/>
+       <Footer/>
     </div>
   )
 }

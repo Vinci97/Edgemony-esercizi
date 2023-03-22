@@ -1,20 +1,20 @@
-import "./index.scss" 
+import style from "./index.module.scss"
 const Hero =({setCategory})=>{
    
     const onHandleClick=(value)=>{
         setCategory(value)
     }
     return(
-        <div className="Hero">
+        <div className={style.Hero}>
             <h1>Cocktail by Vincenzo</h1>
-            <ul className="hero_first_list">
+            <ul className={style.first_list}>
                 <li>Articolo</li>
                 <li>Analcolico</li>
                 <li>Vini</li>
                 <li>Dessert</li>
             </ul>
             <hr />
-            <ul className="hero_second_list">
+            <ul className={style.second_list}>
                 <li onClick={()=>onHandleClick('Ordinary Drink')}>Ordinary Drink</li>
                 <li onClick={()=>onHandleClick('Cocktail')}>Cocktail</li>
                 <li onClick={()=>onHandleClick('Shot')}>Shot</li>

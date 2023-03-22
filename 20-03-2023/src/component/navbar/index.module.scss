@@ -4,7 +4,7 @@
     @include display(center,space-between);
     padding: 10px;
     border-bottom: 1px solid $primary-color;
-    .Navbar_list{
+    .list{
        @include display(center,center,20px);
        list-style-type: none;
        li {
@@ -12,12 +12,12 @@
        }
 
     }
-    .Navbar_logo{
+    .logo{
         width: 50px; 
     }
     div{
         @include display(center,center);
-        .Navbar_button{
+        .button{
             width: 100px;
             height: 40px;
             border: 0;
@@ -30,11 +30,11 @@
                 color: $primary-color;
             }
         }
-        .Navbar_social{
+        .social{
             @include display(center,space-between);
             margin: 10px;
             width: 100px;
-            img{
+            .logoSocial{
                 width: 25px;
                 height: 25px; 
             }

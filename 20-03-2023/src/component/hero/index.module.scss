@@ -7,7 +7,7 @@
         font-size: 3rem;
         color: $primary-color;
     }
-    .hero_first_list{
+    .first_list{
         @include display(center,center,20px);
         list-style-type: none;
         @include cursor;
@@ -19,7 +19,7 @@
         border-width: 4px;
         margin: 20px;
     }
-    .hero_second_list{
+    .second_list{
         @include display(center,space-around);
         width: 80%;
         list-style-type: none;

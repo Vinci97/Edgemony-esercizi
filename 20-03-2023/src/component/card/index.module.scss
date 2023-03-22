@@ -1,25 +1,25 @@
 @import "../../styles/variables";
 .Card{
-  height: 425px;
+  height: 475px;
   width: 260px;
   position: relative;
   @include display(start,center);
-  .Card_imgDrink {
+  .imgDrink {
     width: 260px;
     height: 260px;
     object-fit: cover;
   }
-  .Card_test{
+  .test{
     position: absolute;
     border: 1px solid $primary-color;
     bottom: 0px;
     width: 80%;
-    height: 180px;
+    height: 230px;
     padding: 10px;
     background: $impression-color;
     box-shadow: 0 0 5px $primary-color-alpha;
     color: $primary-color;
-    h3{
+    .title{
       margin-top: 10px;
       margin-bottom: 10px;
       font-size: 1.5rem;

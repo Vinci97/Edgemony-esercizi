@@ -1,15 +1,17 @@
-import "./index.scss"
+import style from "./index.module.scss"
+import { valuesExtractor } from "../../utils/funcs"
 const Card = ({data})=>{
+  const IngredientsData = ()=> valuesExtractor(data, 'strIngredient');
+
     return(
-        <div className="Card">
-            <img className="Card_imgDrink" src={data.strDrinkThumb} alt={data.strDrink} />  
-            <div className="Card_test">
-              <h3 className="Card_title">{data.strDrink}</h3> 
+        <div className={style.Card}>
+            <img className={style.imgDrink} src={data.strDrinkThumb} alt={data.strDrink} />  
+            <div className={style.test}>
+              <h3 className={style.title}>{data.strDrink}</h3> 
               <ul >
-                <li>{data.strIngredient1}</li>
-                <li>{data.strIngredient2}</li>
-                <li>{data.strIngredient3}</li>
-                <li>{data.strIngredient4}</li>
+              {
+                IngredientsData().map((ingredient)=>(<li key={ingredient}>{ingredient}</li>))
+              }
               </ul>   
             </div>      
         </div>

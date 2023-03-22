@@ -1,4 +1,6 @@
 @import "../../styles/variables";
 .Content{
     @include display(center,center,50px,wrap);
+    overflow-y: auto;
+    margin-bottom: 10px;
 }

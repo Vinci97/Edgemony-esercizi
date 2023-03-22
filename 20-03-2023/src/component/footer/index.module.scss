@@ -1,0 +1,17 @@
+@import "../../styles/variables";
+.Footer{
+    height: 200px;
+    background: $impression-color;
+    width: 100%;
+    @include display(center,space-around,0,wrap);
+    .social{
+        @include display(center,space-between);
+        margin: 10px;
+        width: 100px;
+        .logoSocial{
+            width: 25px;
+            height: 25px; 
+            color: $primary-color;
+        }
+    }
+}
