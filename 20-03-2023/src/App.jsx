@@ -6,6 +6,7 @@ import Navbar from './component/navbar/Navbar';
 import {filteredList} from "./utils/funcs"
 import styles from "./App.module.scss"
 import Footer from './component/footer';
+import Reservetion from './component/Reservation';
 
 function App() {
   const [cocktailList, setCocktailList]= useState([]);
@@ -18,6 +19,7 @@ function App() {
   return (
     <div className={styles.App}>
        <Navbar/>
+       {/* <Reservetion/> */}
        <Hero setCategory={setCategory}/>
        <Content data={filteredList(cocktailList, 'strCategory',category)}/>
        <Footer/>

@@ -1,6 +1,9 @@
-@import "../../styles/variables";
 .Content{
-    @include display(center,center,50px,wrap);
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(start);
+    gap: 50px;
     overflow-y: auto;
     margin-bottom: 10px;
+    height: auto;
 }

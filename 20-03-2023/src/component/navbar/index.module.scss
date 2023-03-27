@@ -1,43 +1,57 @@
-@import "../../styles/variables";
+
 .Navbar{
     height: 100px;
-    @include display(center,space-between);
+    @include flexbox();
+    @include justify-content(space-between);
+    @include align-items(center);
     padding: 10px;
-    border-bottom: 1px solid $primary-color;
-    .list{
-       @include display(center,center,20px);
-       list-style-type: none;
-       li {
-        @include cursor;
-       }
-
-    }
-    .logo{
-        width: 50px; 
-    }
-    div{
-        @include display(center,center);
-        .button{
-            width: 100px;
-            height: 40px;
-            border: 0;
-            border-radius: 12px;
-            background-color: $active-color;
-            color: $primary-color;
-            @include cursor;
-            &:hover{
-                background: $impression-color;
-                color: $primary-color;
+    border-bottom: 1px solid $primary;
+    .content{
+        @include flexbox();
+        @include justify-content(space-between);
+        @include align-items(center);
+        .list{
+            @include flexbox();
+            @include justify-content(center);
+            @include align-items(center);
+            gap: 20px;
+            list-style-type: none;
+            li {
+                @include cursor;
+            }
+            
+        }
+        .logo{
+            width: 50px; 
+        }
+        div{
+            @include flexbox();
+            @include justify-content(center);
+            @include align-items(center);
+            .button{
+                width: 100px;
+                height: 40px;
+                border: 0;
+                border-radius: 12px;
+                background-color: $active-color;
+                color: $primary;
+                @include cursor;
+                &:hover{
+                    background: $impression-color;
+                    color: $primary;
+                }
+            }
+            .social{
+                @include flexbox();
+                @include justify-content(space-between);
+                @include align-items(center);
+                margin: 10px;
+                width: 100px;
+                .logoSocial{
+                    width: 25px;
+                    height: 25px; 
+                }
             }
         }
-        .social{
-            @include display(center,space-between);
-            margin: 10px;
-            width: 100px;
-            .logoSocial{
-                width: 25px;
-                height: 25px; 
-            }
-        }
     }
-}
+    }

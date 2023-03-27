@@ -1,17 +1,22 @@
-@import "../../styles/variables";
 .Footer{
-    height: 200px;
+    position: absolute;
     background: $impression-color;
+    height: 200px;
+   
     width: 100%;
-    @include display(center,space-around,0,wrap);
+    @include flexbox();
+    @include justify-content(space-around);
+    @include align-items(center);
     .social{
-        @include display(center,space-between);
+        @include flexbox();
+        @include justify-content(space-between);
+        @include align-items(center);
         margin: 10px;
         width: 100px;
         .logoSocial{
             width: 25px;
             height: 25px; 
-            color: $primary-color;
+            color: $primary;
         }
     }
 }

@@ -2,6 +2,7 @@ import style from "./index.module.scss"
 const Navbar=()=>{
     return(
         <div className={style.Navbar}>
+            <div className={`${style.content} container`}>
             <ul className={style.list}>
                 <li>Home</li>
                 <li>About</li>
@@ -16,6 +17,7 @@ const Navbar=()=>{
                     <img className={style.logoSocial} src="https://bit.ly/3YWfaHX" alt="twitter" />
                     <img className={style.logoSocial} src="https://bit.ly/3Jva3sD" alt="instagram" />
                 </div>
+            </div>
             </div>
         </div>
     )

@@ -1,33 +1,41 @@
-@import "../../styles/variables";
+
 .Hero{
-    @include display(center,center,0,nowrap,column);
-    margin-bottom: 20px;
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+    padding-bottom: 20px;
+    flex-direction: column;
     h1{
         margin: 50px;
         font-size: 3rem;
-        color: $primary-color;
+        color:$primary;
     }
     .first_list{
-        @include display(center,center,20px);
+        @include flexbox();
+        @include justify-content(center);
+        @include align-items(center);
+        gap: 20px;
         list-style-type: none;
         @include cursor;
     }
     hr{
         width: 80%;
         border: 0;
-        border-bottom: 1px dotted $primary-color;
+        border-bottom: 1px dotted $primary;
         border-width: 4px;
         margin: 20px;
     }
     .second_list{
-        @include display(center,space-around);
+        @include flexbox();
+        @include justify-content(space-around);
+        @include align-items(center);
         width: 80%;
         list-style-type: none;
         @include cursor;
         li{
-            border-bottom: 1px solid $primary-color;
+            border-bottom: 1px solid $primary;
             &:hover {
-                background-color: $primary-color;
+                background-color: $primary;
                 color: $active-color;
               }
         }

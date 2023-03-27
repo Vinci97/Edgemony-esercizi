@@ -5,7 +5,7 @@ const Hero =({setCategory})=>{
         setCategory(value)
     }
     return(
-        <div className={style.Hero}>
+        <div className={`${style.Hero} container`}>
             <h1>Cocktail by Vincenzo</h1>
             <ul className={style.first_list}>
                 <li>Articolo</li>
