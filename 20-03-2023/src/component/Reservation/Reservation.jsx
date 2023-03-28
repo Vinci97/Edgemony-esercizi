@@ -11,8 +11,8 @@ const Reservetion =()=>{
         e.preventDefault();
     }
     return <div className={styles.Reservetion}>
-        <div className={styles.overlay}>
-            <div className={styles.container}>
+        <div className={styles.overlay}></div>
+            <div className={`${styles.container} container`}>
                 <form action="">
                     <label htmlFor="text">Inserisci nominativo</label>
                     <input id="text" name="text" type="text" value={surname} onChange={onHandleTextImput} placeholder="Cognome" required/>
@@ -23,7 +23,6 @@ const Reservetion =()=>{
                     <input type="submit" value="click" onChange={onHandleSumit} required/>
                 </form>
             </div>
-        </div>
     </div>
 }
 export default Reservetion

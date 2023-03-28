@@ -14,7 +14,7 @@ const Hero =({setCategory})=>{
                 <li>Dessert</li>
             </ul>
             <hr />
-            <ul className={style.second_list}>
+            <ul className={`${style.second_list} flex-wrap`}>
                 <li onClick={()=>onHandleClick('Ordinary Drink')}>Ordinary Drink</li>
                 <li onClick={()=>onHandleClick('Cocktail')}>Cocktail</li>
                 <li onClick={()=>onHandleClick('Shot')}>Shot</li>

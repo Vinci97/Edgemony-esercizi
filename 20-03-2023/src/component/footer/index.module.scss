@@ -1,8 +1,8 @@
 .Footer{
-    position: absolute;
+    position: fixed;
     background: $impression-color;
     height: 200px;
-   
+    bottom: 0;
     width: 100%;
     @include flexbox();
     @include justify-content(space-around);

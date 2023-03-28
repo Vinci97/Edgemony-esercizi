@@ -19,7 +19,7 @@ function App() {
   return (
     <div className={styles.App}>
        <Navbar/>
-       {/* <Reservetion/> */}
+       <Reservetion/>
        <Hero setCategory={setCategory}/>
        <Content data={filteredList(cocktailList, 'strCategory',category)}/>
        <Footer/>

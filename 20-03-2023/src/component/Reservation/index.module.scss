@@ -1,10 +1,9 @@
 .Reservetion{ 
    position: fixed;
-   height: 50vh;
-   width: 80vh;
-   
-   border: 2px solid red; 
-   background: $impression-color;
+   left: calc(50% - 40vh) ;
+   top: calc(50% - 25vh);
+   @include size(80vh,50vh);
+   background: $skyblue;
    border-radius: 10px;
    z-index: 1;
 }
