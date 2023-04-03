@@ -4,10 +4,10 @@ import { Ctx, InitGlobalState } from './store'
 import Counter from './Counter'
 import './App.css'
 function App() {
-  const [state, dispach]= useReducer(GlobalReducer, InitGlobalState)
+  const [state, dispatch]= useReducer(GlobalReducer, InitGlobalState)
   return (
     <div className="App">
-      <Ctx.Provider value={{state, dispach}}>
+      <Ctx.Provider value={{ state, dispatch }}>
         <Counter/>
       </Ctx.Provider>
     </div>
