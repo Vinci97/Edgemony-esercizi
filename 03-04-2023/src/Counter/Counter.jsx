@@ -1,8 +1,8 @@
 import { useContext} from "react"
-import { CounterCtx } from "../store";
+import { Ctx } from "../store";
 import "./index.css"
 const Counter = ()=>{
-    const { state, dispatch } = useContext(CounterCtx);
+    const { state, dispatch } = useContext(Ctx);
     const onHandleClik = (e) => dispatch({type: e.target.className});
     return(
         <div className="Counter">
