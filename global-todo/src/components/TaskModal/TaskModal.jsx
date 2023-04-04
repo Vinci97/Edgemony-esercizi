@@ -7,6 +7,7 @@ const TaskModal = ()=>{
     const onHandleCloseModal =()=>{
         dispatch({type: "SET_MODAL_TOGGLE"})
       }
+    
     return(
         <div className={styles.TaskModal}>
             <button className={styles.CloseModal} onClick={onHandleCloseModal}>x</button>

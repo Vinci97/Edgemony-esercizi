@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import { useEffect, useContext } from "react";
 import { Context } from "../../store";
 import { GET } from "../../utils/http";
 import Task from "../task/Task";
