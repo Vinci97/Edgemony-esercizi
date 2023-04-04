@@ -1,0 +1,23 @@
+.TaskModal{
+    height: 50vh;
+    width: 50vw;
+    position: fixed;
+    top: calc(50vh - 25%);
+    left: calc(50vw - 25%);
+    background-color: rgb(45, 7, 48);
+}
+.CloseModal{
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   top: 10px;
+   right: 10px; 
+   height: 30px; 
+   width: 30px; 
+   border-radius: 50%;
+   border: 0;
+   background-color: rgb(184, 39, 194);
+   font-size: 1.5rem;
+   cursor: pointer;
+}
