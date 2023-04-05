@@ -20,7 +20,7 @@ export const mainReducer = (state, action) => {
         ...state,
         tempTodo:{
           ...state.tempTodo,
-          username: action.payload.username,
+          username: action.payload,
         }
       }  
     case "SET_TEMP_TODO":
