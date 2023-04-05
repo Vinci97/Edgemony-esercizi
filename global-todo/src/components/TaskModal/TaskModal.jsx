@@ -1,9 +1,8 @@
 import { useContext } from "react";
 import { Context } from "../../store";
 import styles from "./index.module.scss";
-import { initialState } from "../../store/state";
 const TaskModal = ()=>{
-    const { state, dispatch } = useContext(Context, initialState);
+    const { state, dispatch } = useContext(Context);
     const onHandleCloseModal =()=>{
         dispatch({type: "SET_MODAL_TOGGLE"})
       }
