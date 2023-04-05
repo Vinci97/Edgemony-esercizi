@@ -4,7 +4,7 @@
     width: 100%;
     z-index: 1;
     .content{
-        height: 60vh;
+        height: 500px;
         width: 300px;
         position: fixed;
         display: flex;
@@ -12,7 +12,7 @@
         justify-content: center;
         align-items: center;
         gap: 20px;
-        top: calc(50vh - 30vh);
+        top: calc(50vh - 250px);
         left: calc(50vw - 150px);
         background-color: rgb(45, 7, 48);
         border-radius: 10px;
