@@ -42,7 +42,7 @@ const TaskModal = ()=>{
                     onChange={onChangeImputImage}
                     placeholder="Image Url"
                     required/>
-                <input type="submit" value="Add Todo"/>
+                <input className={styles.submit} type="submit" value="Add Todo"/>
             </form>
             <div className={styles.overlay} onClick={onHandleCloseModal}></div>
             
