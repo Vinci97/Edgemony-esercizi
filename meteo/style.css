@@ -28,7 +28,7 @@ header{
     align-items: center;
     justify-content: center;
 }
-.myImput{
+.myInput{
     all: unset;
     padding-left: 10px;
     height: 30px;
@@ -166,12 +166,12 @@ p{
 .separatonTemp{
     width: 40%;
     border: 1px solid rgb(255, 255, 255);
-    border-radius: 1000%;
+    border-radius: 100%;
 }
 .separation1,.separation2{
     height: 70%;
     border: 1px solid rgb(255, 255, 255);
-    border-radius: 1000%;
+    border-radius: 100%;
 }
 #mySelect {
     font-size: 16px;
