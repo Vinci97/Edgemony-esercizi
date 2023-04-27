@@ -67,10 +67,11 @@ main{
     display: flex;
     align-items: center;
     gap: 20px;
-    height: 300px; 
+    min-height: 300px; 
     width: 90%; 
     padding: 15px;
     overflow: auto;
+    justify-content: center;
 }
 
 ::-webkit-scrollbar {
